@@ -1,0 +1,12 @@
+ForEach ($COMPUTER in (Get-Content C:\Users\1525704633A\Documents\test\Computers.txt )) 
+{if(!(Test-Connection -Cn $computer -BufferSize 16 -Count 1 -ea 0 -quiet))
+ 
+{write-host "cannot reach $computer" -f red}
+ 
+ 
+ 
+else {
+ 
+some command
+}
+} 
